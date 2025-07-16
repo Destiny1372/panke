@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
@@ -72,6 +73,26 @@
       border-radius: 10px;
     }
 
+    .slide-controls {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .slide-controls button {
+      background: #2980b9;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      margin: 0 5px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .slide-controls button:hover {
+      background: #3498db;
+    }
+
     .product-info {
       padding: 20px;
     }
@@ -126,6 +147,9 @@
       font-size: 1rem;
       color: #27ae60;
       font-weight: bold;
+      background: #e9f5ee;
+      padding: 10px;
+      border-radius: 12px;
     }
 
     .btn-order {
@@ -166,6 +190,10 @@
           <img src="https://biaupload.com/do.php?imgf=org-d4f376f279053.jpg" alt="پنکه">
         </div>
       </div>
+      <div class="slide-controls">
+        <button onclick="showSlide(currentSlide - 1)">قبلی</button>
+        <button onclick="showSlide(currentSlide + 1)">بعدی</button>
+      </div>
 
       <div class="product-info">
         <h2 class="product-title">پنکه دو قلو فندکی خودرو</h2>
@@ -177,12 +205,12 @@
           <div class="feature-item"><span class="feature-icon">✔️</span><span>طراحی جمع و جور و نصب آسان روی داشبورد</span></div>
           <div class="feature-item"><span class="feature-icon">✔️</span><span>قابلیت تنظیم زاویه دلخواه برای هر پنکه</span></div>
           <div class="feature-item"><span class="feature-icon">✔️</span><span>کارکرد با فندکی خودرو بدون نیاز به باتری اضافه</span></div>
-          <div class="feature-item"><span class="feature-icon">✔️</span><span>خنک‌کنندگی قوی حتی در گرم‌ترین روزهای تابستان</span></div>
+          <div class="feature-item"><span class="feature-icon">✔️</span><span>خنک‌کنندگی حتی در گرم‌ترین روزهای تابستان</span></div>
           <div class="feature-item"><span class="feature-icon">✔️</span><span>قیمت مناسب نسبت به نمونه‌های مشابه در بازار</span></div>
         </div>
 
         <div class="price-container">
-          تنها 798 تومن | پرداخت بعد از تحویل
+          تنها 798 تومن | پرداخت بعد از تحویل 💚 با اطمینان کامل
         </div>
 
         <a href="https://de.mihanstore.net/fcartmob.php?id=1845" class="btn-order" target="_blank">
@@ -201,8 +229,6 @@
       currentSlide = (index + slides.length) % slides.length;
       slides[currentSlide].classList.add('active');
     }
-
-    setInterval(() => showSlide(currentSlide + 1), 4000);
   </script>
 </body>
 </html>
